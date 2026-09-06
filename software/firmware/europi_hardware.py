@@ -31,7 +31,7 @@ from machine import freq
 from machine import mem32
 import time
 
-from europi_config import load_europi_config, CPU_FREQS
+from europi_config import load_europi_config, CPU_FREQS, MODEL_PICO_2, MODEL_PICO_2W
 from experimental.experimental_config import load_experimental_config
 
 # Load the configuration objects so we can initialize
@@ -602,7 +602,7 @@ class UsbConnection:
     """
 
     def __init__(self):
-        if europi_config.PICO_MODEL == "pico2":
+        if europi_config.PICO_MODEL in (MODEL_PICO_2, MODEL_PICO_2W):
             self.pin = None
         else:
             self.pin = DigitalReader(PIN_USB_CONNECTED)

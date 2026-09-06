@@ -21,7 +21,18 @@ sys.path.append(str(Path(__file__).parent.parent))  # contrib
 sys.path.append(str(Path(__file__).parent.parent / "tests" / "mocks"))
 
 
+import utime
 from mock_hardware import MockHardware
+
+
+@pytest.fixture(autouse=True)
+def mock_time_module(monkeypatch):
+    """
+    MicroPython's `time` module includes utime's ticks_ms/sleep_ms/etc extensions, but CPython's
+    doesn't. Scripts written against MicroPython's `time` (rather than `utime` directly) would
+    otherwise raise ImportError only when collected under pytest. See issue #310.
+    """
+    monkeypatch.setitem(sys.modules, "time", utime)
 
 
 @pytest.fixture

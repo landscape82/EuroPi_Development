@@ -12,21 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import inspect
-import sys
-import pytest
-import utime
+
 from contrib.menu import EUROPI_SCRIPTS
 from bootloader import BootloaderMenu
 
 
-@pytest.fixture
-def mock_time_module(monkeypatch):
-    """the time module isn't as easily mocked as the utime module is,
-    but we can just swap it out for our mock for this test"""
-    monkeypatch.setitem(sys.modules, "time", utime)
-
-
-def test_menu_imports(mock_time_module):
+def test_menu_imports():
     """User the bootloader code to test that every script declared in EUROPI_SCRIPTS can be imported."""
     bootloader = BootloaderMenu(EUROPI_SCRIPTS)
     for display_name in EUROPI_SCRIPTS.keys():
