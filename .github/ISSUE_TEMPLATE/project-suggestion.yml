@@ -1,0 +1,18 @@
+name: Project Suggestion
+description: Suggest any modifications to the project as a whole, or any expanders or alternative versions you would like to see
+title: "[Project Suggestion] "
+labels: ["suggestion"]
+body:
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe your suggestion or idea
+    validations:
+      required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: Images
+      description: If applicable, add screenshots or photos to help explain your problem.
+    validations:
+      required: false
