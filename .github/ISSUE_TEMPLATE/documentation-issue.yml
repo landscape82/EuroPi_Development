@@ -1,0 +1,25 @@
+name: Documentation Suggestion
+description: Report any issue or suggestion with the documentation
+title: "[Documentation Suggestion] "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the issue or suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: Images
+      description: If applicable, add screenshots or photos to help explain your problem.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false

@@ -1,0 +1,24 @@
+name: Question / Request
+description: Ask any question about the project, or request more documentation or files
+title: "[Question / Request] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Ask your question
+    validations:
+      required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: Images
+      description: If applicable, add screenshots or photos to help explain your question.
+    validations:
+      required: false
+  - type: textarea
+    id: comments
+    attributes:
+      label: Any other comments
+    validations:
+      required: false
