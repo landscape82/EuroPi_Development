@@ -1,5 +1,10 @@
 # Change Log
 
+This file stopped being updated after version 0.6.1. It's kept for historical reference only —
+the changelog of record for anything newer, including this fork's own releases, is each
+release's notes on the [Releases page](https://github.com/landscape82/EuroPi_Development/releases),
+generated automatically from merged PRs.
+
 ### 2022-08-28
 
 - [Release] version 0.6.1
