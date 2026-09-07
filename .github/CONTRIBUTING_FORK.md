@@ -30,6 +30,25 @@ gh pr create --repo landscape82/EuroPi_Development --base main --head <branch-na
 Fill in the PR using [`.github/pull_request_template.md`](pull_request_template.md) — Summary,
 What will be applied/fixed, Test steps.
 
+## Cutting a firmware release
+
+Bump `__version__` in `software/firmware/version.py`, merge that via the normal PR flow, then tag
+the merge commit on `main`:
+
+```
+git tag v<version>
+git push origin v<version>
+```
+
+Pushing the tag triggers [`compile_to_uf2.yml`](workflows/compile_to_uf2.yml), which builds all
+four board variants and publishes a GitHub release with the `.uf2` files attached. Verified
+end-to-end against `v0.23.1`.
+
+`publish_to_pypi.yml` also runs on the same tag push and will fail on this fork with a "Trusted
+publishing exchange failure" — that job publishes to PyPI under the upstream project's trusted
+publisher, which this fork doesn't have configured. This is expected and does not block the
+firmware release.
+
 ## Syncing with upstream
 
 `main` is periodically fast-forwarded from
