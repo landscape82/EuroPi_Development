@@ -28,3 +28,14 @@ build from this fork is permitted. The one thing upstream explicitly asks: don't
 
 See [`.github/CONTRIBUTING_FORK.md`](.github/CONTRIBUTING_FORK.md) for this repo's own
 branch-protection and PR/CI workflow.
+
+## Changelog
+
+[`CHANGELOG.md`](CHANGELOG.md) stopped being updated at version 0.6.1. The changelog of record for
+anything since — including this fork's own releases — is the
+[Releases page](https://github.com/landscape82/EuroPi_Development/releases), generated
+automatically from merged PRs.
+
+## Security
+
+See [`SECURITY.md`](SECURITY.md) for how to report a vulnerability.
