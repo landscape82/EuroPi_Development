@@ -1,7 +1,8 @@
 [![Continuous Integration](https://github.com/landscape82/EuroPi_Development/actions/workflows/continuous_integration.yml/badge.svg)](https://github.com/landscape82/EuroPi_Development/actions/workflows/continuous_integration.yml) [![discord members](https://discord-live-members-count-badge.vercel.app/api/discord-members?guildId=931297838804127794)](https://discord.gg/JaQwtCnBV5) [![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/europi)](https://www.reddit.com/r/EuroPi/) [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Allen-Synthesis/Europi)](https://github.com/Allen-Synthesis/EuroPi/releases)
 # EuroPi
 > **This is a development fork.** This repository tracks
-> [Allen-Synthesis/EuroPi](https://github.com/Allen-Synthesis/EuroPi) upstream; see [FORK.md](FORK.md)
+> [Allen-Synthesis/EuroPi](https://github.com/Allen-Synthesis/EuroPi) upstream; see
+> [FORK.md](https://github.com/landscape82/EuroPi_Development/blob/main/FORK.md)
 > for how it relates to upstream and where to send issues/PRs.
 
 The EuroPi is a user reprogrammable [Eurorack](https://en.wikipedia.org/wiki/Eurorack) module developed by [Allen Synthesis](https://allensynthesis.co.uk) that uses the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/) to process and produce modular level signals based on code written in [MicroPython](https://micropython.org/). The entire project is open-source.
