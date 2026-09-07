@@ -1,9 +1,17 @@
 name: Continuous Integration
 on:
   push:
+    branches:
+      - main
+    tags:
+      - "v*"
   pull_request:
     branches:
       - main
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
 
@@ -19,6 +27,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: psf/black@23.11.0
