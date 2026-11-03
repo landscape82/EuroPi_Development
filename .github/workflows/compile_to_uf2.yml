@@ -18,12 +18,12 @@ jobs:
 
     steps:
       - name: clone EuroPi
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: europi
 
       - name: clone micropython
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: micropython/micropython
           ref: v1.25.0
