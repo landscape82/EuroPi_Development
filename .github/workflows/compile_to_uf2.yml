@@ -127,7 +127,7 @@ jobs:
           EOF
 
       - name: create github release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             europi-v${{ steps.release-asset-version.outputs.VERSION }}-RPI_PICO.uf2
